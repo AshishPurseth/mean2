@@ -10,7 +10,7 @@ const app = express()
 const port = process.env.PORT || 3000
 mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/space", {useNewUrlParser:true ,useCreateIndex:true, useUnifiedTopology: true})
 mongoose.connection.on('connected' , ()=>{
-console.log("MongoDB connection successfully established!" )
+console.log("MongoDB connection successfully established" )
 })
 
 app.use(express.static('public'))
