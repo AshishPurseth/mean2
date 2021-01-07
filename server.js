@@ -8,7 +8,7 @@ import api from './server/routes/api'
 dotenv.config()
 const app = express()
 const port = process.env.PORT || 3000
-mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/space", {useNewUrlParser:true ,useCreateIndex:true, useUnifiedTopology: true})
+mongoose.connect(process.env.PORT || "mongodb://localhost/space", {useNewUrlParser:true ,useCreateIndex:true, useUnifiedTopology: true})
 mongoose.connection.on('connected' , ()=>{
 console.log("MongoDB connection successfully established" )
 })
